@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <form action="./registerresponse.html" method="post">
+        <dl>
+            <dt>
+                <label for="user">Username</label>
+            </dt>
+            <dd>
+                <input type="text" name="Username" id="user" required pattern=".{8,}"
+                title="user name atleast have 8">
+            </dd>
+            <dt>
+                <label for="pass">passsword</label>
+            </dt>
+            <dd>
+                <input type="password" name="password" id="pass" required minlength="8" maxlength="16"
+                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[/d])(?=.*!@#$%&*:)[a-zA-Z \d @!#$&*_]{8,16}"
+                        title="password should have one lowercase,one upper case,one special character,one digit and min length 8 , max length 16">
+            </dd>
+            <dt>
+                <label for="Mail">Emali</label>
+            </dt>
+            <dd>
+                <input type="email" name="Email" id="mail" required>
+            </dd>
+            <dt>
+                <label for="num">PhNo</label>
+            </dt>
+            <dd>
+                <input type="number" name="PhNo" id="num" required>
+            </dd>
+            <dt>
+                <label for="gen">GENDER</label>
+            </dt>
+            <dd>
+                <input type="radio" name="GENDER" value="MAle" id="boy" required>
+                <label for="boy">Male</label>
+            </dd>
+            <dd>
+                <input type="radio" name="GENDER" value="FEMAle" id="girl" required>
+                <label for="girl">Female</label>     
+            </dd>
+            <dt>
+                <label for="dob">DOB</label>
+            </dt>
+            <dd>
+                <input type="date" name="DOB" id="dob" required>
+            </dd>
+        </dl>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

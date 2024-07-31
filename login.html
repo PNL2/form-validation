@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Response</title>
+</head>
+<body>
+    <!--<h1>Registered Successfully</h1>-->
+    <form action="./response.html" method="post">
+        <dl>
+            <dt>
+                <label for="user">Username</label>
+            </dt>
+            <dd>
+                <input type="text" name="Username" id="user" required
+                    pattern=".{8,}"
+                        title="user name atleast have 8">
+            </dd>
+            <dt>
+                <label for="pass">Password</label>
+            </dt>
+            <dd>
+                <input type="password" name="Password" id="pass" required
+                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[/d])(?=.*!@#$%&*:)[a-zA-Z \d @!#$&*_]{8,16}"
+                        title="password should have one lowercase,one upper case,one special character,one digit and min length 8 , max length 16">
+            </dd>
+        </dl>
+        <input type="submit" value="login">
+    </form>
+</body>
+</html>
